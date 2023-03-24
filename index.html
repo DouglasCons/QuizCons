@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlashCards - Prova da Conscienciologia</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" type="module" charset="utf-8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,100;1,300&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>FlashCards - Prova da Conscienciologia</h1>
+    <hr>
+    <div id="containerForm">
+        
+        <p>Informe um termo de pesquisa. (deixe em branco para "todas")</p>
+        <input id="search" type="text" placeholder="Ex: para Proéxis, informe proex" />
+        <button id="find">Filtrar</button>
+        
+        <div id="qtd">.</div>
+        
+    </div>
+
+    <div id="flash">
+        <div id="anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="160" fill="#000" class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z"/>
+            </svg>
+        </div>
+        <div id="pergunta">
+            <h3></h3>
+        </div>
+
+        <div id="resposta">
+            <h3></h3>
+        </div>
+        <div id="proximo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100" height="160" fill="#000" class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671z"/>
+            </svg>
+        </div>
+
+    </div>
+
+    <div class="button">
+        <button class="r">Resposta</button>
+        <button class="g">Guardar</button>
+    </div>
+    <table style="border: 1px solid #333" id="tabela">
+        <thead>
+            <tr>
+                <th>Pergunta</th>
+                <th>Resposta</th>
+            </tr>
+        </thead>
+        <tbody id="tb">
+
+        </tbody>
+    </table>
+
+    <button 
+        for="export-file" 
+        id="pdf" 
+        onclick="window.print()"
+    >Download PDF</button>
+
+
+</body>
+
+</html>
