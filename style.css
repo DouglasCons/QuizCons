@@ -1,47 +1,69 @@
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     
 }
 h1 {
     text-align: center;
+    margin: 20px;
+}
+#containerForm {
+    padding: 5%;
 }
 #flash {
     background: rgb(107, 162, 238);
     min-height: 70vh;
+    width: 90%;
+    border-radius: 20px;
+    margin: auto;
+    justify-content: center;
     display: grid;
-    grid-template-columns: 10% auto 10%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 10vh;
+    grid-template-areas: "P P"
+                        "R R"
+                        "d m";
+    gap: 5px;
 }
 #pergunta {
     text-align: center;
-    width: 90%;
+    width: 95%;
     margin: auto;
     margin-top: 20px;
-    border-radius: 12px;
     padding: 10px;
-    grid-row-start: 1;
-    grid-row-end: 2;
+    grid-area: P;
 }
 #resposta {
     text-align: center;
-    width: 90%;
+    width: 95%;
     margin: auto;
-    border-radius: 12px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    grid-area: R;
+   
 }
 #anterior {
-    display: flex;
-    grid-template-columns: auto;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    display:flex;
+    justify-content: start;
+    grid-area: d;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#anterior:hover {
+    transform: scale(1.03);
 }
 #proximo {
+    grid-area: m;
     display: flex;
-    grid-row-start: 1;
-    grid-row-end: 3;
+    justify-content: end;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+#proximo:hover {
+    transform: scale(1.03);
 }
 .hide {
     display: none;
@@ -59,6 +81,12 @@ h1 {
 }
 .button, .r, .g, #find {
     padding: 15px;
+}
+span {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    font-family: monospace;
 }
 button, #anterior, #proximo {
     background: #fff;
