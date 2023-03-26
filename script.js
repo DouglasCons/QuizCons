@@ -29,6 +29,7 @@ import prova from './jsArquivo.js';
                 ${newArray.length} ${newArray.length > 1? "questões" : "questão"}
                 de um total de ${prova.length}.</p>
             `
+            verso.classList.add("hide")
         }
 
         let count = 0
@@ -60,11 +61,6 @@ import prova from './jsArquivo.js';
             verso.classList.add("hide")
 
         })
-        
-        console.log(newArray)
-        console.log(newArray[5].pergunta.toLowerCase())
-
-        verso.classList.add("hide")
 
     })
 

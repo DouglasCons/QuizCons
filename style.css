@@ -10,7 +10,7 @@ h1 {
     margin: 20px;
 }
 #containerForm {
-    padding: 5%;
+    padding: 5% 5% 2% 5%;
 }
 #flash {
     background: rgb(107, 162, 238);
@@ -68,9 +68,6 @@ h1 {
 .hide {
     display: none;
 }
-#containerForm {
-    margin-bottom: 15px;
-}
 #search {
     height: 25px;
     width: 300px;
@@ -84,6 +81,7 @@ h1 {
 }
 span {
     display: flex;
+    justify-content: center;
     align-items: center;
     font-size: 1.2em;
     font-family: monospace;
@@ -107,8 +105,8 @@ button:hover {
     transform: scale(1.05);
 }
 #tabela {
-    width: 100%;
-    margin-top: 25px;
+    width: 95%;
+    margin: auto;
     align-items: center;
 }
 table, td {
