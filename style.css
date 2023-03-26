@@ -10,7 +10,7 @@ h1 {
     margin: 20px;
 }
 #containerForm {
-    padding: 5% 5% 0 5%;
+    padding: 5% 5% 2% 5%;
 }
 #flash {
     background: rgb(107, 162, 238);
@@ -67,9 +67,6 @@ h1 {
 }
 .hide {
     display: none;
-}
-#containerForm {
-    margin-bottom: 15px;
 }
 #search {
     height: 25px;
