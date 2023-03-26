@@ -19,21 +19,22 @@ import prova from './jsArquivo.js';
         if(newArray <= 0) {
             const qtd = document.querySelector('#qtd')
             qtd.innerHTML = `
-                <span>Não foram encontradas questões com esse termo. 
-                Por Favor, tente digitar apenas uma parte do termo.</span>
+                <p>Não foram encontradas questões com esse termo. 
+                Por Favor, tente digitar apenas uma parte do termo.</p>
             `
         } else {
             const qtd = document.querySelector('#qtd')
             qtd.innerHTML = `
-                <span>${newArray.length > 1? "Foram selecionadas" : "Foi selecionada"} 
+                <p>${newArray.length > 1? "Foram selecionadas" : "Foi selecionada"} 
                 ${newArray.length} ${newArray.length > 1? "questões" : "questão"}
-                de um total de ${prova.length}.</span>
+                de um total de ${prova.length}.</p>
             `
         }
 
         let count = 0
 
-        frente.innerHTML = `<h2>${newArray[count].pergunta}</h2>`
+        frente.innerHTML = `<h2>Questão ${newArray[count].id}</h2><br>
+            <h2>${newArray[count].pergunta}</h2>`
         verso.innerHTML = `<h2>${newArray[count].resposta}</h2>`
 
         const bA = document.querySelector('#anterior')
@@ -41,7 +42,8 @@ import prova from './jsArquivo.js';
         bA.addEventListener('click', function anterior(){
             if(count > 0) count--
             
-            frente.innerHTML = `<h2>${newArray[count].pergunta}</h2>`
+            frente.innerHTML = `<h2>Questão ${newArray[count].id}</h2><br>
+            <h2>${newArray[count].pergunta}</h2>`
             verso.innerHTML = `<h2>${newArray[count].resposta}</h2>`
             verso.classList.add("hide")
 
@@ -52,7 +54,8 @@ import prova from './jsArquivo.js';
         bP.addEventListener('click', function proximo(){
             if(count >= 0 && count < (newArray.length - 1)) count++
             
-            frente.innerHTML = `<h2>${newArray[count].pergunta}</h2>`
+            frente.innerHTML = `<h2>Questão ${newArray[count].id}</h2><br>
+            <h2>${newArray[count].pergunta}</h2>`
             verso.innerHTML = `<h2>${newArray[count].resposta}</h2>`
             verso.classList.add("hide")
 
