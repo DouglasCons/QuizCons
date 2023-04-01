@@ -46,7 +46,7 @@ import prova from './jsArquivo.js';
             
             frente.innerHTML = `<h2>Questão ${newArray[count].id}:</h2><br>
             <h2>${newArray[count].pergunta}</h2>`
-            verso.innerHTML = `<h2>Resposta:</h2><br>
+            verso.innerHTML = `<h2>Resposta</h2><br>
             <h2>${newArray[count].resposta}</h2>`
             verso.classList.add("hide")
         })
@@ -58,7 +58,7 @@ import prova from './jsArquivo.js';
             
             frente.innerHTML = `<h2>Questão ${newArray[count].id}:</h2><br>
             <h2>${newArray[count].pergunta}</h2>`
-            verso.innerHTML = `<h2>Resposta:</h2><br>
+            verso.innerHTML = `<h2>Resposta</h2><br>
             <h2>${newArray[count].resposta}</h2>`
             verso.classList.add("hide")
         })
