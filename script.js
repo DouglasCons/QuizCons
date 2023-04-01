@@ -34,20 +34,21 @@ import prova from './jsArquivo.js';
 
         let count = 0
 
-        frente.innerHTML = `<h2>Questão ${newArray[count].id}</h2><br>
+        frente.innerHTML = `<h2>Questão ${newArray[count].id}:</h2><br>
             <h2>${newArray[count].pergunta}</h2>`
-        verso.innerHTML = `<h2>${newArray[count].resposta}</h2>`
+        verso.innerHTML = `<h2>Resposta:</h2><br>
+        <h2>${newArray[count].resposta}</h2>`
 
         const bA = document.querySelector('#anterior')
 
         bA.addEventListener('click', function anterior(){
             if(count > 0) count--
             
-            frente.innerHTML = `<h2>Questão ${newArray[count].id}</h2><br>
+            frente.innerHTML = `<h2>Questão ${newArray[count].id}:</h2><br>
             <h2>${newArray[count].pergunta}</h2>`
-            verso.innerHTML = `<h2>${newArray[count].resposta}</h2>`
+            verso.innerHTML = `<h2>Resposta:</h2><br>
+            <h2>${newArray[count].resposta}</h2>`
             verso.classList.add("hide")
-
         })
 
         const bP = document.querySelector('#proximo')
@@ -55,11 +56,11 @@ import prova from './jsArquivo.js';
         bP.addEventListener('click', function proximo(){
             if(count >= 0 && count < (newArray.length - 1)) count++
             
-            frente.innerHTML = `<h2>Questão ${newArray[count].id}</h2><br>
+            frente.innerHTML = `<h2>Questão ${newArray[count].id}:</h2><br>
             <h2>${newArray[count].pergunta}</h2>`
-            verso.innerHTML = `<h2>${newArray[count].resposta}</h2>`
+            verso.innerHTML = `<h2>Resposta:</h2><br>
+            <h2>${newArray[count].resposta}</h2>`
             verso.classList.add("hide")
-
         })
 
     })
